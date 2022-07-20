@@ -20,7 +20,7 @@ curl -O https://dl.google.com/go/go${VERSION}.linux-amd64.tar.gz
 # 2. Go install.
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go${VERSION}.linux-amd64.tar.gz
 source $HOME/.profile
-# echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
 source $HOME/.profile
 go version
 # Cleanup downloaded files
