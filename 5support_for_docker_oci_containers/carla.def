@@ -1,0 +1,35 @@
+BootStrap: docker
+From: carlasim/carla:0.9.13
+#From: ubuntu:18.04
+
+#%setup
+#	pwd
+#	echo ${APPTAINER_ROOTFS}
+#	cd ${APPTAINER_ROOTFS}
+#	pwd
+#	ls
+#	cd opt/carla-simulator
+#	pwd
+#	ls
+#	cd Import
+#	pwd
+#	ls
+
+#%test
+#	hostnamectl
+
+%post
+	chmod -R 777 /home
+	pwd
+	ls -lh
+	ls /home -lh
+	ls /home/carla -lh
+	ls /home/carla/Import -lh
+%runscript
+#	pwd
+#	ls
+#	ls /opt
+#	ls /opt/carla-simulator
+#	ls /opt/carla-simulator/Import
+# TODO: code that calls carla
+	/home/carla/CarlaUE4.sh
