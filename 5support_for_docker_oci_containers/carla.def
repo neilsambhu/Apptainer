@@ -19,17 +19,21 @@ From: carlasim/carla:0.9.13
 #	hostnamectl
 
 %post
-	chmod -R 777 /home
-	pwd
-	ls -lh
-	ls /home -lh
-	ls /home/carla -lh
-	ls /home/carla/Import -lh
-%runscript
+#	chmod -R 777 /home
+#	pwd
+#	ls -lh
+#	ls /home -lh
+#	ls /home/carla -lh
+#	ls /home/carla/Import -lh
+	sudo apt -v
+	sudo apt update
+#	apt-get -v
+#	apt-get update
+#%runscript
 #	pwd
 #	ls
 #	ls /opt
 #	ls /opt/carla-simulator
 #	ls /opt/carla-simulator/Import
 # TODO: code that calls carla
-	/home/carla/CarlaUE4.sh
+#	/home/carla/CarlaUE4.sh

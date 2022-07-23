@@ -5,26 +5,33 @@ cd 5support_for_docker_oci_containers
 sudo rm carla.sif
 sudo rm -r carla/
 
-# systemctl start docker
-# start=`date +%s.%N`
-# # echo $start
+sudo systemctl start docker
+start=`date +%s.%N`
+dt=$(date '+%m/%d/%Y %H:%M:%S');
+# echo $start
+echo "$dt: start building container"
 
-# # Building From Docker / OCI Containers
-# # sudo apptainer build carla.sif carla.def
-# # $ sudo apptainer build --sandbox alpine/ docker://alpine
+# Building From Docker / OCI Containers
+# sudo apptainer build carla.sif carla.def
+# $ sudo apptainer build --sandbox alpine/ docker://alpine
 # sudo apptainer build --sandbox carla/ carla.def
+sudo apptainer build --sandbox --fakeroot carla/ carla.def
 
-# # change permissions for carla directory
-# sudo chmod -R 777 carla/
+# change permissions for carla directory
+sudo chmod -R 777 carla/
 
-# # Convert carla directory to carla.sif
-# # sudo apptainer build carla.sif carla/
+# Convert carla directory to carla.sif
+# sudo apptainer build carla.sif carla/
 
-# # sudo ./carla.sif
+# sudo ./carla.sif
 
-# systemctl stop docker
+sudo systemctl stop docker
 
-# end=`date +%s.%N`
-# # echo $end
-# runtime=$( echo "$end - $start" | bc -l )
-# echo $runtime seconds
+end=`date +%s.%N`
+dt=$(date '+%m/%d/%Y %H:%M:%S');
+# echo $end
+echo "$dt: end building container"
+runtime=$( echo "$end - $start" | bc -l )
+echo $runtime seconds
+
+# bash work_with_container.sh
