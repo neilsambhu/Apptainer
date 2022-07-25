@@ -14,8 +14,9 @@ echo "$dt: start building container"
 # Building From Docker / OCI Containers
 # sudo apptainer build carla.sif carla.def
 # $ sudo apptainer build --sandbox alpine/ docker://alpine
-# sudo apptainer build --sandbox carla/ carla.def
-sudo apptainer build --sandbox --fakeroot carla/ carla.def
+sudo apptainer build --sandbox carla/ carla.def
+# sudo apptainer build --sandbox --fakeroot carla/ carla.def #FATAL:   newuidmap was not found in PATH (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin), required with fakeroot and unprivileged installation
+# sudo apptainer build --sandbox --net carla/ carla.def #failed: "net" argument
 
 # change permissions for carla directory
 sudo chmod -R 777 carla/

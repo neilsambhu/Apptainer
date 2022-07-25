@@ -25,10 +25,11 @@ From: carlasim/carla:0.9.13
 #	ls /home -lh
 #	ls /home/carla -lh
 #	ls /home/carla/Import -lh
-	sudo apt -v
-	sudo apt update
-#	apt-get -v
-#	apt-get update
+#	sudo apt -v
+#	sudo apt update
+	sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
+	sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+	apt-get update
 #%runscript
 #	pwd
 #	ls
