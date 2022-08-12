@@ -15,4 +15,7 @@ cd "6carla"
 # execute container CarlaUE4.sh
 # apptainer exec carla-0.9.13.sif ls
 # apptainer exec carla-0.9.13/ pwd
+# bash carla-0.9.13/home/carla/CarlaUE4.sh # successful
+
+# execute container CarlaUE4.sh: GPU selection
 bash carla-0.9.13/home/carla/CarlaUE4.sh
