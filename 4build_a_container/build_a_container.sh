@@ -2,8 +2,8 @@
 
 cd 4build_a_container
 # Cleanup
-rm carla.sif carla_latest.sif
-sudo rm -r carla
+# rm carla.sif carla_latest.sif
+# sudo rm -r carla
 
 # Overview
 # apptainer pull docker://carlasim/carla
@@ -17,4 +17,4 @@ sudo rm -r carla
 # apptainer shell --writable carla/ # fail: does not allow access to carla directory
 
 # Building containers from Apptainer definition files
-# sudo apptainer build carla.sif carla.def
+apptainer build --fakeroot carla.sif carla.def 
