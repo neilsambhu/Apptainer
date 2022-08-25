@@ -2,6 +2,8 @@ cd "6carla"
 
 # build container 
 # apptainer build carla-0.9.13.sif docker://carlasim/carla:0.9.13 |& tee out.txt
+apptainer build carla-0.9.13.sif docker://carlasim/carla:0.9.13
+# apptainer build --nv carla-0.9.13.sif docker://carlasim/carla:0.9.13 # mount Nvidia CUDA libraries
 # apptainer build --sandbox carla-0.9.13/ docker://carlasim/carla:0.9.13
 
 # run container
